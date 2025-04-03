@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "1e2dc1af-dc18-48bc-98a1-29d87bbd0d6d",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13073117",
+		"_collection_link": "https://gold-moon-169331.postman.co/workspace/Personal-Workspace~94fa99c0-5ab9-4289-8a5f-fd25dc39e3b3/collection/13073117-1e2dc1af-dc18-48bc-98a1-29d87bbd0d6d?action=share&source=collection_link&creator=13073117"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}products",
+					"host": [
+						"{{url}}products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_name",
+							"value": "test1",
+							"type": "text"
+						},
+						{
+							"key": "product_description",
+							"value": "Testing Product",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}products",
+					"host": [
+						"{{url}}products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}products/2",
+					"host": [
+						"{{url}}products"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}products/2",
+					"host": [
+						"{{url}}products"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://192.168.244.91:8000/api/",
+			"type": "string"
+		}
+	]
+}
